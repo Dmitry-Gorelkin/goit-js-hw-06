@@ -16,12 +16,12 @@
 
 const ulElCategories = document.getElementById("categories");
 const liEl = ulElCategories.querySelectorAll(".item");
-const arr = [...liEl].map((el) => el.children);
+const arrEl = [...liEl].map((el) => el.children);
 
 /* Решение */
 console.log("Number of categories: ", ulElCategories.childElementCount);
-arr.forEach((el) => {
-  const x = [...el];
-  console.log("Category: ", x[0].textContent);
-  console.log("Elements: ", x[1].childElementCount);
+arrEl.forEach((el) => {
+  const arr = [...el];
+  console.log("Category: ", arr[0].textContent);
+  console.log("Elements: ", arr[1].childElementCount);
 });
