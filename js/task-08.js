@@ -26,7 +26,7 @@ const fn = (event) => {
     password: password.value,
   });
 
-  form.reset();
+  event.currentTarget.reset();
 };
 
 form.addEventListener("submit", fn);
