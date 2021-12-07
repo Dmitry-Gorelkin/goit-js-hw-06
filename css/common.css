@@ -23,11 +23,19 @@ button {
   cursor: pointer;
 }
 
-.gallery__img {
-  width: 1260;
-  height: 750;
-}
-
 .gallery {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item:not(:last-child) {
+  display: block;
+  margin-right: 10px;
+}
+
+.gallery__img {
+  display: block;
+  width: 480px;
 }

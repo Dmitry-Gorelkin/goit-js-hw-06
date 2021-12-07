@@ -20,16 +20,13 @@ const images = [
 ];
 
 /* Решение */
-const ulGalleryImg = document.querySelector("ul", ".gallery");
+const ulGalleryImg = document.querySelector(".gallery");
 
-const arrGallaty = images.map(({ url, alt }) => {
-  const liEl = document.createElement("li");
-  const imgEl = document.createElement("img");
-  imgEl.url = url;
-  imgEl.alt = alt;
-  imgEl.classList.add("gallery__img");
-  liEl.appendChild(imgEl);
-  return liEl;
-});
+const arrGallaty = images
+  .map(
+    ({ url, alt }) =>
+      `<li  class="item"><img src=${url} alt=${alt} class="gallery__img"></li>`
+  )
+  .join("");
 
-ulGalleryImg.append(...arrGallaty);
+ulGalleryImg.insertAdjacentHTML("beforeend", arrGallaty);
