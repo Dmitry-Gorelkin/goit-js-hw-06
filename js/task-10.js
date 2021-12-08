@@ -21,9 +21,60 @@ const btnCreate = document.querySelector("[data-create]");
 const btnDestroy = document.querySelector("[data-destroy]");
 const boxes = document.getElementById("boxes");
 
-const createBoxes = (amount) => {};
+/*************Вариант 1**************/
+
+// const createBoxes = (amount) => {
+//   const boxs = [];
+//   let size = 30;
+
+//   if (amount === "" || amount < 0 || amount > 100) {
+//     console.log("ты редиска");
+//     return;
+//   }
+
+//   for (var i = 0; i < amount; i++) {
+//     const box = document.createElement("div");
+
+//     box.style.backgroundColor = getRandomHexColor();
+//     box.style.width = `${size}px`;
+//     box.style.height = `${size}px`;
+
+//     boxs.push(box);
+
+//     size += 10;
+//   }
+
+//   boxes.append(...boxs);
+// };
+
+/*************Вариант 2**************/
+
+const createBoxes = (amount) => {
+  const boxs = [];
+  let size = 30;
+
+  if (amount === "" || amount < 0 || amount > 100) {
+    console.log("ты редиска");
+    return;
+  }
+
+  for (var i = 0; i < amount; i++) {
+    const box = `<div style="width: ${size}px; height: ${size}px; background-color: ${getRandomHexColor()};"></div>`;
+
+    boxs.push(box);
+
+    size += 10;
+  }
+
+  boxes.insertAdjacentHTML("afterbegin", boxs.join(""));
+};
+
+const fnCreate = () => {
+  const amount = parseInt(inputNumber.value);
+  createBoxes(amount);
+};
 
 const destroyBoxes = () => (boxes.innerHTML = "");
 
-btnCreate.addEventListener("click", createBoxes);
+btnCreate.addEventListener("click", fnCreate);
 btnDestroy.addEventListener("click", destroyBoxes);

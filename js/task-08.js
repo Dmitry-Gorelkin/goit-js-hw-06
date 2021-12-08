@@ -19,7 +19,7 @@ const fn = (event) => {
   } = event.currentTarget;
 
   if (email.value === "" || password.value === "")
-    return alert("Педрила заполни форму!");
+    return alert("Редиска заполни форму!");
 
   console.log({
     email: email.value,
