@@ -14,13 +14,15 @@
 // Category: Technologies
 // Elements: 5
 
-const ulElCategories = document.getElementById("categories");
-const arrLiEl = [...ulElCategories.children].map((el) => el.children);
+/* Решение_1 */
+// const ulElCategories = document.getElementById("categories");
+// const arrLiEl = [...ulElCategories.children].map((el) => el.children);
 
-/* Решение */
-console.log("Number of categories: ", ulElCategories.childElementCount);
-arrLiEl.forEach((el) => {
-  const arr = [...el];
-  console.log("Category: ", arr[0].textContent);
-  console.log("Elements: ", arr[1].childElementCount);
-});
+// console.log("Number of categories: ", ulElCategories.childElementCount);
+// arrLiEl.forEach((el) => {
+//   const arr = [...el];
+//   console.log("Category: ", arr[0].textContent);
+//   console.log("Elements: ", arr[1].childElementCount);
+// });
+
+/* Решение_2 */
