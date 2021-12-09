@@ -26,6 +26,8 @@ let size = 30;
 const createBoxes = (amount) => {
   let string = "";
 
+  console.log("до редиски", amount);
+
   if (amount === "" || amount < 0 || amount > 100) {
     console.log("ты редиска", amount);
     return;
@@ -44,9 +46,7 @@ const destroyBoxes = () => {
   size = 30;
 };
 
-refs.btnCreate.addEventListener("click", () =>
-  createBoxes(parseInt(refs.input.value))
-);
+refs.btnCreate.addEventListener("click", () => createBoxes(refs.input.value));
 refs.btnDestroy.addEventListener("click", destroyBoxes);
 
 // const inputNumber = document.querySelector("[type=number]");
