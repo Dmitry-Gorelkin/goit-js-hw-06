@@ -44,9 +44,10 @@ const destroyBoxes = () => {
   size = 30;
 };
 
-refs.btnCreate.addEventListener("click", () => createBoxes(parseInt(refs.input.value));
+refs.btnCreate.addEventListener("click", () =>
+  createBoxes(parseInt(refs.input.value))
+);
 refs.btnDestroy.addEventListener("click", destroyBoxes);
-
 
 // const inputNumber = document.querySelector("[type=number]");
 // const btnCreate = document.querySelector("[data-create]");
