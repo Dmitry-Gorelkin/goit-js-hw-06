@@ -26,3 +26,12 @@
 // });
 
 /* Решение_2 */
+
+const ulElCategories = document.getElementById("categories");
+console.log("Number of categories: ", ulElCategories.childElementCount);
+
+const arrLiEl = document.querySelectorAll("[class=item]");
+arrLiEl.forEach((el) => {
+  console.log(el.querySelector("h2").textContent);
+  console.log(el.querySelectorAll("li").length);
+});
